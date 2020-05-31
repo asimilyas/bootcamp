@@ -23,6 +23,4 @@ jobs:
       
     - name: deploying global surge
       run:  surge ./ asimilyas.surge.sh --token ${{ secrets.BOOTCAMP_SURGE_TOKEN}}  
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+    
